@@ -32,7 +32,7 @@
         let main = document.getElementById('main');
         let d = main.ownerDocument;    //the document object that main belongs to
         let html = document.documentElement;  //the <html> element
-        let body = document.body;  // the <body>
+        let body = document.body;  // the <body> /
         
         let df = new DocumentFragment();
         let txt = document.createTextNode('a text node');
@@ -51,37 +51,37 @@
 
         let mainChildren = main.children;   //Elements only, HTMLCollection
         log(mainChildren)
-        // mainChildren[0].textContent = ""
-        // let num = mainChildren.length;
-        // for(let i=0; i<num; i++){
-        //     let nt = mainChildren[i].nodeType;
-        //     console.log('main.children', i, nodeTypes[nt]);
-        // }
+        mainChildren[0].textContent = ""
+        let num = mainChildren.length;
+        for(let i=0; i<num; i++){
+            let nt = mainChildren[i].nodeType;
+            console.log('main.children', i, nodeTypes[nt]);
+        }
         console.log('')
         let mainChildNodes = main.childNodes;  //Nodes, NodeList [LIVE]
         log(mainChildNodes)
         mainChildNodes[7].textContent = ""
-        // let numNodes = mainChildNodes.length;
-        // for(let n=0; n<numNodes; n++){
-        //     let nt = mainChildNodes[n].nodeType;
-        //     console.log('main.childNodes', n, nodeTypes[nt]);
-        // }
-        // console.log('')
-        // let doc = document.childNodes;
-        // let numDocNodes = doc.length;
-        // for(let c=0; c<numDocNodes; c++){
-        //     let nt = doc[c].nodeType;
-        //     console.log('document.childNodes', c, nodeTypes[nt], doc[c].nodeName);
-        // }
-        // console.log('')
-        //NodeList
+        let numNodes = mainChildNodes.length;
+        for(let n=0; n<numNodes; n++){
+            let nt = mainChildNodes[n].nodeType;
+            console.log('main.childNodes', n, nodeTypes[nt]);
+        }
+        console.log('')
+        let doc = document.childNodes;
+        let numDocNodes = doc.length;
+        for(let c=0; c<numDocNodes; c++){
+            let nt = doc[c].nodeType;
+            console.log('document.childNodes', c, nodeTypes[nt], doc[c].nodeName);
+        }
+        console.log('')
+        NodeList
         document.querySelectorAll('.abc');
         document.body.childNodes
         
         //HTMLCollections
         main.getElementsByClassName('.abc')
         main.getElementsByTagName('pre')
-        // main.getElementsByTagNameNS('xml');
+        main.getElementsByTagNameNS('xml');
         main.children
         
         /*******************************
